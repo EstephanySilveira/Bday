@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="authoe" content="Estephany da Silveira Testa">
+    <meta name="description" content="Site para dar parabéns">
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Damion&family=Poppins:ital,wght@0,700;1,300&display=swap" rel="stylesheet">
+    <title>Present</title>
+</head>
+
+
+<body>
+    <div class="conteudo">
+        <div class="div_principal">
+        <div class="div_secundaria">
+            <h3 class="letter">Hoje é seu aniversário?</h3>
+            <a href="index.html"><button class="meu_botao" onclick="sim()">SIM</button></a>
+            <button class="meu_botao"  onmouseover="desvia(this)">NÃO</button>
+        </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    function desvia(t) {
+        var btn = t;
+        btn.style.position = 'absolute';
+        btn.style.bottom = geraPosicao(10, 90);
+        btn.style.left = geraPosicao(10, 90);
+        console.log("Opa, desviei...");
+    }
+
+    function geraPosicao(min, max) {
+        return (Math.random() * (max - min) + min) +"%";
+    }
+
+</script>
+
+
+</html>
